@@ -1,10 +1,23 @@
 [gd_scene format=3 uid="uid://6c7atrummkix"]
 
-[ext_resource type="Script" uid="uid://cduyhycvp2d5j" path="res://journal_entry.gd" id="1_6ml0f"]
-[ext_resource type="Script" uid="uid://b0jmcx8cb1nqs" path="res://journal_ui.gd" id="2_fkteb"]
+[ext_resource type="Script" uid="uid://btu5qy2qavpi0" path="res://journal/journal_entry.gd" id="1_iysk1"]
+[ext_resource type="Texture2D" uid="uid://ce0iyw0t0vbnn" path="res://textures/UI/journal_page.tres" id="2_6ml0f"]
 
-[node name="Node2D" type="Node2D" unique_id=983556574]
-script = ExtResource("1_6ml0f")
+[node name="ResourcePreloader" type="ResourcePreloader" unique_id=817690356]
+script = ExtResource("1_iysk1")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=200389885]
-script = ExtResource("2_fkteb")
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1719618908]
+
+[node name="Panel" type="Panel" parent="CanvasLayer" unique_id=1705020414]
+offset_left = 99.0
+offset_top = 76.0
+offset_right = 1139.0
+offset_bottom = 592.0
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer/Panel" unique_id=906349690]
+layout_mode = 0
+offset_left = 195.0
+offset_top = 23.0
+offset_right = 494.0
+offset_bottom = 466.0
+texture = ExtResource("2_6ml0f")
